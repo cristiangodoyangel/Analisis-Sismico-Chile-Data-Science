@@ -49,5 +49,44 @@ print("\n")
 print("======================= Verificación de Año y Mes =======================")
 print(df_1[['Fecha_Chile', 'Año', 'Mes']].head())
 
-#
+# nos encontramos con un detalle, el mes es numérico ya que necesitamos que sea numérico para las estadísticas y gráficos,
+# pero también lo necesitamos en texto para que se entienda mejor
 
+# Columna numérica, para análisis y gráficos.
+df_1['Mes'] = df_1['Fecha_Chile'].dt.month
+
+# Columna en texto, para mostrar la tabla final a los usuarios, para los labels de gráficos
+meses = {
+    1: "Enero", 2: "Febrero", 3: "Marzo", 4: "Abril",
+    5: "Mayo", 6: "Junio", 7: "Julio", 8: "Agosto",
+    9: "Septiembre", 10: "Octubre", 11: "Noviembre", 12: "Diciembre"
+}
+df_1['Mes_Nombre'] = df_1['Mes'].map(meses)
+
+# verificamos si tenemos correctamente los datos numéricos y en texto
+print("\n")
+print("======================= Verificación de Año y Mes =======================")
+print(df_1[['Fecha_Chile', 'Año', 'Mes', 'Mes_Nombre']].head())
+print("\n")
+
+# vemos otro detalle, la hora. necesitamos mostrar la hora para que se entienda mejor y segmentar los sismos por hora
+# se extrae la hora exacta del datetime, se convierte a texto como hora exacta.
+df_1['Hora_Exacta'] = df_1['Fecha_Chile'].dt.time
+print("\n")
+print("======================= Verificación de Hora =======================")
+print(df_1[[ 'Año', 'Mes_Nombre', 'Hora_Exacta']].head())
+print("\n")
+
+# Se extrae la hora exacta del datetime, se convierte a texto como hora exacta.
+df_1['Hora_Exacta'] = df_1['Fecha_Chile'].dt.time
+print("\n")
+print("======================= Verificación de Hora =======================")
+print(df_1[[ 'Año', 'Mes_Nombre', 'Hora_Exacta']].head())
+print("\n")
+
+# Se extrae la hora exacta del datetime, se convierte Hora para análisis y gráficos.
+df_1['Hora'] = df_1['Fecha_Chile'].dt.hour
+print("\n")
+print("======================= Verificación de Hora =======================")
+print(df_1[['Fecha_Chile', 'Año', 'Mes', 'Mes_Nombre', 'Hora', 'Hora_Exacta']].head())
+print("\n")
