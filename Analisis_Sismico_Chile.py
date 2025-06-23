@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
+import plotly.express as px
 
 
 
@@ -29,6 +29,28 @@ print("\n")
 print(df_1.describe().round(1).T)
 print("\n")
 
+# buscamos valores nulos en el dataset.
+print("\n")
+print("======================= Valores Nulos en el Dataset Sismico =======================")
+print("\n")
+print(df_1.isnull().sum())
+print("\n")
+# no tenemos valores nulos en el dataset.
+
+# buscamos valores duplicados en el dataset.
+print("\n")
+print("======================= Valores Duplicados en el Dataset Sismico =======================")
+print("\n")
+print(df_1.duplicated().sum())
+print("\n")
+# tenemos 3 valores duplicados en el dataset.
+# mostramos los valores duplicados.
+print("\n")
+print("======================= Valores Duplicados en el Dataset Sismico =======================")
+print("\n")
+print(df_1[df_1.duplicated()])
+print("\n")
+# no son valores duplicados, son valores diferentes.
 # con la estadistica descriptiva podemos ver que el dataset tiene 4018 filas y 5 columnas.
 # con la información del dataser podemos ver que la fecha no está en el formato correcto, 
 # está en string, si necesitamos generar estadisticas sobre la fecha, debemos convertirlo a datetime.
@@ -80,7 +102,7 @@ print("\n")
 # Se extrae la hora exacta del datetime, se convierte a texto como hora exacta.
 df_1['Hora_Exacta'] = df_1['Fecha_Chile'].dt.time
 print("\n")
-print("======================= Verificación de Hora =======================")
+
 print(df_1[[ 'Año', 'Mes_Nombre', 'Hora_Exacta']].head())
 print("\n")
 
@@ -90,3 +112,44 @@ print("\n")
 print("======================= Verificación de Hora =======================")
 print(df_1[['Fecha_Chile', 'Año', 'Mes', 'Mes_Nombre', 'Hora', 'Hora_Exacta']].head())
 print("\n")
+
+# buscamos valores atipicos en el dataset.
+outliers_magnitud = df_1[df_1['Magnitude'] > 8.0] 
+
+print("\n")
+print("======================= Sismos con Magnitud Mayor a 8.0 =======================")
+print(outliers_magnitud[['Año', 'Mes_Nombre','Hora_Exacta']])
+print(f"\nCantidad: {len(outliers_magnitud)} eventos\n")
+# no hay valores atipicos en el dataset. los valores son terremotos reales ocurridos en Chile.
+
+# Comenzamos con gráficos para para analizar los datos.
+
+# Gráfico de barras
+# Se crea una nueva columna con la hora en formato de texto para el gráfico.
+df_1['Hora_Label'] = df_1['Hora'].apply(lambda x: f"{x:02d}:00")
+
+fig = px.histogram(
+    df_1,
+    x="Hora_Label",
+    category_orders={"Hora_Label": [f"{i:02d}:00" for i in range(24)]},
+    title="Cantidad de Sismos por Hora del Día",
+    labels={"Hora_Label": "Hora del Día", "count": "Cantidad de Sismos"},
+    color_discrete_sequence=["indianred"]
+)
+
+fig.update_layout(
+    bargap=0.1,
+    template="plotly_white",
+    width=1000,
+    height=600,
+    title_font_size=22,
+    xaxis=dict(title_font_size=18, tickfont_size=14),
+    yaxis=dict(title_font_size=18, tickfont_size=14)
+)
+
+
+print("\n")
+print("======================= Gráfico Interactivo: Sismos por Hora =======================")
+fig.show()
+print("\n")
+
