@@ -1,6 +1,6 @@
 # 🇨🇱 Sismos en Chile - Explicado por el Pastor
 
-![Portada](https://www.cristiangodoyangel.dev/assets/banner.png)
+![Portada](https://www.cristiangodoyangel.dev/Analisis-Sismico-Chile-Data-Science/assets/banner.png)
 
 **Análisis de datos sísmicos en Chile (2012–2025)** con herramientas de ciencia de datos, explicado de forma accesible por el Pastor. Este proyecto busca no solo mostrar estadísticas, sino también educar sobre la actividad sísmica en Chile, uno de los países más sísmicos del mundo.
 
