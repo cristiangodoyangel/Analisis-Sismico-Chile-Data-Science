@@ -69,22 +69,37 @@ Preparación de datos para dashboards o informes PDF.
 
 ---
 
-## 🧠 ¿Qué aprenderás?
+## 📊 Visualizaciones del Proyecto
 
-- Limpieza y transformación de datos con `pandas`
-- Visualización interactiva con `plotly`
-- Clasificación geográfica con lógica de latitudes
-- Exploración de patrones temporales en datos reales
+🔥 Mapa de calor (Heatmap): Distribución de sismos por mes y hora del día.
 
----
+📊 Promedios mensuales: Divididos en cuatrimestres, para facilitar la lectura.
 
-## 🛠️ Tecnologías
+🌍 Zonas geográficas: Clasificación en Norte, Centro y Sur, con sus top 3 sismos.
 
-- Python 3
-- pandas
-- plotly
-- seaborn / matplotlib
-- Google Colab
+🗺️ Análisis por región: 16 regiones chilenas, con sus promedios anuales y top 3 sismos.
+
+🗺️ Mapas interactivos con zoom: Mapas por región que muestran los 3 sismos más intensos dentro del área geográfica.
+
+🧮 Estadísticas generales: Conteo, distribución, magnitudes, fechas.
+
+## 🛠️ Tecnologías utilizadas
+
+Python 3 — Lenguaje principal
+
+pandas — Limpieza y análisis de datos
+
+plotly.express — Visualización dinámica e interactiva
+
+geopandas — Análisis geoespacial
+
+shapely — Manipulación de geometrías
+
+matplotlib / seaborn — Visualización adicional
+
+Google Colab — Entorno de desarrollo colaborativo
+
+GeoJSON — Para delimitar regiones oficiales de Chile
 
 ---
 
@@ -92,6 +107,13 @@ Preparación de datos para dashboards o informes PDF.
 
 ```bash
 📦 sismos-en-chile
-├── terremotos_en_chile.py        # Código fuente del análisis
-├── Sismos en Chile - Explicado por el Pastor.pdf  # Presentación del proyecto
-└── README.md
+├── terremotos_en_chile.py                     # Código fuente completo (Google Colab)
+├── df_1_sismos_chile.csv                      # Dataset limpio con zonas geográficas
+├── df_sismos_con_regiones.csv                 # Dataset unido a regiones oficiales de Chile
+├── Sismos en Chile - Explicado por el Pastor.pdf  # Presentación lista para compartir
+└── README.md                                  # Documentación del proyecto
+```
+
+
+
+
