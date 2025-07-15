@@ -110,7 +110,6 @@ GeoJSON — Para delimitar regiones oficiales de Chile
 ├── terremotos_en_chile.py                     # Código fuente completo (Google Colab)
 ├── df_1_sismos_chile.csv                      # Dataset limpio con zonas geográficas
 ├── df_sismos_con_regiones.csv                 # Dataset unido a regiones oficiales de Chile
-├── Sismos en Chile - Explicado por el Pastor.pdf  # Presentación lista para compartir
 └── README.md                                  # Documentación del proyecto
 ```
 
