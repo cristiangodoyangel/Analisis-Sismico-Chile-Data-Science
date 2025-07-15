@@ -1,4 +1,4 @@
-# 🇨🇱 Sismos en Chile - Explicado por el Pastor
+# 🇨🇱 Sismos en Chile 
 
 ![Portada](https://github.com/cristiangodoyangel/Analisis-Sismico-Chile-Data-Science/blob/ccd2e4ea36b6f6c3129db5eaf1740cf6516abb31/assets/banner.png)
 
