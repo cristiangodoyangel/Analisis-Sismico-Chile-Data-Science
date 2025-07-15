@@ -2,7 +2,19 @@
 
 ![Portada](https://github.com/cristiangodoyangel/Analisis-Sismico-Chile-Data-Science/blob/ccd2e4ea36b6f6c3129db5eaf1740cf6516abb31/assets/banner.png)
 
-**Análisis de datos sísmicos en Chile (2012–2025)** con herramientas de ciencia de datos, explicado de forma accesible por el Pastor. Este proyecto busca no solo mostrar estadísticas, sino también educar sobre la actividad sísmica en Chile, uno de los países más sísmicos del mundo.
+**Análisis de datos sísmicos en Chile (2012–2025)** 
+Análisis de datos sísmicos en Chile entre 2012 y 2025, usando herramientas de ciencia de datos modernas, explicado de forma accesible y educativa por el Pastor Cristian Godoy Angel. Este proyecto combina análisis técnico con una mirada pastoral y pedagógica, para ayudar a entender de forma clara cómo se comporta la tierra en Chile, uno de los países más sísmicos del mundo.
+
+**✨ Propósito del Proyecto**
+Chile está sobre el Cinturón de Fuego del Pacífico, y por tanto la actividad sísmica es una realidad constante. Sin embargo, muchos no entienden cuándo, dónde y con qué frecuencia ocurren estos eventos. Este proyecto tiene como propósito:
+
+Educar al público general sobre la distribución de los sismos en el país.
+
+Presentar análisis de datos de manera clara, accesible y visual.
+
+Fortalecer el vínculo entre ciencia, educación y conciencia social.
+
+
 
 ---
 
